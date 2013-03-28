@@ -1,0 +1,6 @@
+noConsole: "&cYou are a console, dumbass!"
+notEnoughArguments: "&6Error: &cNot enough arguments!"
+usage: "&6Usage: &c%arg0"
+playerNotFound: "&6Error: &cPlayer \"%arg0\" not found."
+tpSuccess: "&9You have been teleported to %arg0!"
+serverStop: "&6Server stopping in %arg0 seconds (by %arg1)"

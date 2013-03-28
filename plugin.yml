@@ -1,0 +1,10 @@
+main: me.delocaz.cmdx.CmdX
+version: 1.0-dev
+author: Delocaz
+name: CmdX
+commands:
+  cx_tp:
+    aliases: [tp, teleport, tele]
+    description: "Teleports you to another player"
+    usage: "/tp <player>"
+    permission: cmdx.tp.tp
