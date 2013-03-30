@@ -5,6 +5,7 @@ import me.delocaz.cmdx.commands.CXFreeze;
 import me.delocaz.cmdx.commands.CXGameMode;
 import me.delocaz.cmdx.commands.CXServer;
 import me.delocaz.cmdx.commands.CXTP;
+import me.delocaz.cmdx.commands.CXTPHere;
 import me.delocaz.cmdx.commands.CXTime;
 import me.delocaz.cmdx.commands.CXWeather;
 
@@ -26,6 +27,7 @@ public class CmdX extends JavaPlugin {
         getAPI().getCommandManager().registerCommand(new CXWeather(), "weather", false);
         getAPI().getCommandManager().registerCommand(new CXGameMode(), "gamemode", false);
         getAPI().getCommandManager().registerCommand(new CXFreeze(), "freeze", false);
+        getAPI().getCommandManager().registerCommand(new CXTPHere(), "tphere", true);
     }
     public void onDisable() {
         getAPI().getPlayerDataManager().save();

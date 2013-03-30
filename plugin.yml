@@ -33,4 +33,9 @@ commands:
     description: "Freezes a player"
     usage: "/freeze [player]"
     permission: cmdx.mod.freeze
+  cx_tphere:
+    aliases: [tphere]
+    description: "Teleports another player to you"
+    usage: "/tphere <player>"
+    permission: cmdx.tp.tphere
     
