@@ -29,6 +29,8 @@ public class CXServer extends CXCommand {
 				}
 			}, delay*20L);
 			break;
+		case "info":
+			
 		}
 		return true;
 	}

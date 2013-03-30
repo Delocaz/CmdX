@@ -15,14 +15,17 @@ public class CXTime extends CXCommand {
 			cs.sendMessage(getAPI().getLanguageManager().getLang("notEnoughArguments"));
 			return false;
 		}
-		int time = 1000;
+		int time = 2000;
 		switch (args[0]) {
 		case "night":
-			time = 13000;
+			time = 14000;
+			break;
 		case "noon":
 			time = 6000;
+			break;
 		case "midnight":
 			time = 18000;
+			break;
 		}
 		if (StringUtils.isNumeric(args[0])) {
 			time = Integer.parseInt(args[0]);

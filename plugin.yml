@@ -8,3 +8,29 @@ commands:
     description: "Teleports you to another player"
     usage: "/tp <player>"
     permission: cmdx.tp.tp
+  cx_server:
+    aliases: [server, serv]
+    description: "Views information and does things relating to the server itself"
+    usage: "/server <stop>"
+    permission: cmdx.server.server
+  cx_time:
+    aliases: [time, t]
+    description: "Sets the time in your current world"
+    usage: "/time <day|night|noon|midnight|Nticks>"
+    permission: cmdx.world.time
+  cx_weather:
+    aliases: [weather, rain, storm, w]
+    description: "Sets the weather in your current world (if none specified)"
+    usage: "/weather [on|off] [world]"
+    permission: cmdx.world.weather
+  cx_gamemode:
+    aliases: [gamemode, gm, gmode, gamem]
+    description: "Sets the gamemode for the specified player"
+    usage: "/gamemode [player] [survival|creative|adventure]"
+    permission: cmdx.player.gamemode
+  cx_freeze:
+    aliases: [freeze]
+    description: "Freezes a player"
+    usage: "/freeze [player]"
+    permission: cmdx.mod.freeze
+    

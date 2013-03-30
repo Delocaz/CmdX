@@ -1,11 +1,14 @@
 package me.delocaz.cmdx.api;
 
 import me.delocaz.cmdx.CmdX;
+import me.delocaz.cmdx.util.CXUtils;
+
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.event.Listener;
 
-public abstract class CXCommand implements CommandExecutor {
+public abstract class CXCommand implements CommandExecutor, Listener {
 
     private String cmdname;
     private boolean playeronly;

@@ -1,7 +1,8 @@
 package me.delocaz.cmdx.commands;
 
 import me.delocaz.cmdx.api.CXCommand;
-import me.delocaz.cmdx.api.CXUtils;
+import me.delocaz.cmdx.util.CXUtils;
+
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 

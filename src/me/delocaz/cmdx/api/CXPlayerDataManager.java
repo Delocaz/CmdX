@@ -42,7 +42,8 @@ public class CXPlayerDataManager {
      * @return The data
      */
     public Serializable getData(OfflinePlayer p, String path) {
-        return data.get(p.getName()).get(path);
+    	HashMap<String, Serializable> playermap = data.get(p.getName());
+        return playermap != null ? playermap.get(path) : null;
     }
     /**
      * Saves all player data files to disk

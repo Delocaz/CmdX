@@ -3,12 +3,12 @@ package me.delocaz.cmdx.api;
 public class CXAPI {
 
     private CXCommandManager cmdman;
-    private CXLang lang;
+    private CXLanguageManager lang;
     private CXPlayerDataManager pdman;
 
     public CXAPI() {
         this.cmdman = new CXCommandManager();
-        this.lang = new CXLang();
+        this.lang = new CXLanguageManager();
         this.pdman = new CXPlayerDataManager();
     }
 
@@ -24,7 +24,7 @@ public class CXAPI {
      * Gets CmdX's language (localization) manager
      * @return  The CmdX language manager
      */
-    public CXLang getLanguageManager() {
+    public CXLanguageManager getLanguageManager() {
         return lang;
     }
     /**
