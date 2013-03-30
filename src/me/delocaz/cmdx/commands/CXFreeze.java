@@ -2,6 +2,7 @@ package me.delocaz.cmdx.commands;
 
 import me.delocaz.cmdx.api.CXCommand;
 import me.delocaz.cmdx.util.CXUtils;
+import me.delocaz.cmdx.util.TouchTimerArray;
 
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -9,6 +10,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.player.PlayerMoveEvent;
 
 public class CXFreeze extends CXCommand {
+	TouchTimerArray tta = new TouchTimerArray();
 	@Override
 	public boolean executeCommand(CommandSender cs, String[] args) {
 		Player ptarget = null ;
@@ -49,7 +51,11 @@ public class CXFreeze extends CXCommand {
 		if (isFrozen != null && isFrozen) {
 			e.setCancelled(true);
 			e.getPlayer().teleport(e.getFrom());
-			e.getPlayer().sendMessage(getAPI().getLanguageManager().getLang("youAreFrozen"));
+			long time = tta.getTimer(e.getPlayer().getName()).get();
+			if (time > 1000) {
+				e.getPlayer().sendMessage(getAPI().getLanguageManager().getLang("youAreFrozen"));
+				tta.getTimer(e.getPlayer().getName()).touch();
+			}
 		}
 	}
 }

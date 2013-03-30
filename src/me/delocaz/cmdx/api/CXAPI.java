@@ -5,11 +5,13 @@ public class CXAPI {
     private CXCommandManager cmdman;
     private CXLanguageManager lang;
     private CXPlayerDataManager pdman;
+    private CXItemManager iman;
 
     public CXAPI() {
         this.cmdman = new CXCommandManager();
         this.lang = new CXLanguageManager();
         this.pdman = new CXPlayerDataManager();
+        this.iman = new CXItemManager();
     }
 
     /**
@@ -29,10 +31,16 @@ public class CXAPI {
     }
     /**
      * Gets CmdX's player data manager
-     *
      * @return The CmdX player data manager
      */
     public CXPlayerDataManager getPlayerDataManager() {
         return pdman;
+    }
+    /**
+     * Gets CmdX's item manager
+     * @return The CmdX item manager
+     */
+    public CXItemManager getItemManager() {
+    	return iman;
     }
 }
