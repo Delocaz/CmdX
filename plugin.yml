@@ -38,4 +38,18 @@ commands:
     description: "Teleports another player to you"
     usage: "/tphere <player>"
     permission: cmdx.tp.tphere
-    
+  cx_kick:
+    aliases: [kick, boot]
+    description: "Kicks a player from the server"
+    usage: "/kick <player> [reason]"
+    permission: cmdx.mod.kick
+  cx_slap:
+    aliases: [slap, bitchslap, punch]
+    description: "Slaps a player, which sends them flying forwards"
+    usage: "/slap [player] [power]"
+    permission: cmdx.fun.slap
+  cx_pinfo:
+    aliases: [pinfo, info, whois]
+    description: "Gives various informations about a player, will also work with offline players"
+    usage: "/pinfo [player]"
+    permission: cmdx.player.pinfo

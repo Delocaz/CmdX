@@ -31,18 +31,19 @@ public class CXGameMode extends CXCommand {
 				} else {
 					ptarget = (Player) cs;
 				}
-			} else if (target == null) {
+			}
+			if (target == null) {
 				target = CXUtils.invertGameMode(ptarget.getGameMode());
 			}
-		} else if (args.length >= 2) {
+		} else {
 			target = CXUtils.parseGameMode(args[1]);
 			ptarget = CXUtils.getPlayer(args[0]);
-			if (target == null) {
-				cs.sendMessage(getAPI().getLanguageManager().getLang("invalidGameMode", args[0]));
-				return false;
-			}
 			if (ptarget == null) {
 				cs.sendMessage(getAPI().getLanguageManager().getLang("playerNotFound", args[1]));
+				return false;
+			}
+			if (target == null) {
+				cs.sendMessage(getAPI().getLanguageManager().getLang("invalidGameMode", args[0]));
 				return false;
 			}
 		}
